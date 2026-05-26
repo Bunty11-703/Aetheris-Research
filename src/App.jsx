@@ -125,6 +125,8 @@ export default function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true",
           ...(apiKey && { "x-api-key": apiKey }),
         },
         body: JSON.stringify({
